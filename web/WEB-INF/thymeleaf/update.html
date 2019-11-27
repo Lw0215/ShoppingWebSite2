@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<form action="/product/update" method="post">
+<div class="form-group">
+    <label>商品编号</label>
+    <input type="text" class="form-control" name="productid" th:value="${pro.productid}" />
+</div>
+
+    <div class="form-group">
+        <label>商品名称</label>
+        <input type="text" class="form-control" name="productname" th:value="${pro.productname}" />
+    </div>
+
+    <div class="form-group">
+        <label>商品库存</label>
+        <input type="text" class="form-control" name="productsum" th:value="${pro.productsum}" />
+    </div>
+
+    <div class="form-group">
+        <label>商品价格</label>
+        <input type="text" class="form-control" name="productprice" th:value="${pro.productprice}" />
+    </div>
+<!--git config --global user.name "LW"
+git config --global user.email "1009842893@qq.com"-->
+    <div class="form-group">
+        <label>商品编号</label>
+       <select class="form-contro1" name="status.statusId">
+        <option th:each="s:${statusList}" th:value="${s.id}" th:text="${s.name}"
+                th:selected="${pro.status_id==s.id}">
+        </option>
+       </select>
+    </div>
+    <button type="submit" class="btn btn-primary">修改</button>
+</form>
+</body>
+</html>

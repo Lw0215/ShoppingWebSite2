@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lw.dao.ProductDao">
+    <select id="selectAll" resultMap="pro">
+        select  * from product
+
+    </select>
+
+    <select id="selectOne" resultMap="pro">
+        select * from product where  product_id=#{productid}
+    </select>
+
+    <delete id="delete">
+        delete from product where  product_id=#{productid}
+    </delete>
+
+    <insert id="insert">
+        insert into product (product_name, product_sum, product_price,  status_id) values (#{productname},#{productsum},#{productprice},#{status_id});
+    </insert>
+
+    <update id="update">
+        update product set product_sum =#{productsum},product_price=#{productprice}, status_id=#{status_id}  where  product_id=#{productid};
+    </update>
+
+    <resultMap id="pro" type="com.lw.po.Product">
+        <id property="productid" column="product_id"/>
+        <result property="productname" column="product_name"/>
+        <result property="productsum" column="product_sum"/>
+        <result property="productprice" column="product_price"/>
+       <association property="status_id" select="com.lw.dao.StatusDao.selectOne"  column="status_id"/>
+    </resultMap>
+</mapper>
