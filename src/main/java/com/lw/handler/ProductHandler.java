@@ -28,7 +28,7 @@ public class ProductHandler {
         model.addAttribute("pros",ps.selectAll());
         return "select";
     }
-
+/*ss*/
     @RequestMapping("/selectOne")
     public String selectOne(int product_id,Model model){
         model.addAttribute("pro",ps.selectOne(product_id));
