@@ -32,7 +32,7 @@ public class StatusServiceImpl implements StatusService{
         return sd.insert(staint);
     }
 
-    public int update(int id) {
-        return sd.update(id);
+    public int update(Status status) {
+        return sd.update(status);
     }
 }

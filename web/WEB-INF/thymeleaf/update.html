@@ -26,13 +26,12 @@
         <label>商品价格</label>
         <input type="text" class="form-control" name="productprice" th:value="${pro.productprice}" />
     </div>
-<!--git config --global user.name "LW"
-git config --global user.email "1009842893@qq.com"-->
+
     <div class="form-group">
         <label>商品编号</label>
-       <select class="form-contro1" name="status.statusId">
+       <select class="form-contro1" name="status_id.id">
         <option th:each="s:${statusList}" th:value="${s.id}" th:text="${s.name}"
-                th:selected="${pro.status_id==s.id}">
+                th:selected="${pro.status_id.id==s.id}">
         </option>
        </select>
     </div>

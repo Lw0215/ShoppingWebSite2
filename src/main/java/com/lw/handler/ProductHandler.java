@@ -41,6 +41,24 @@ public class ProductHandler {
     public String update(Product product){
         ps.update(product);
         return "redirect:/product/selectAll";
-
     }
+
+    @RequestMapping("/delete")
+    public String delete(int id){
+        ps.delete(id);
+        return "redirect:/product/selectAll";
+    }
+
+    @RequestMapping("/insert")
+    public String inset(Product product){
+        ps.inser(product);
+        return "redirect:/product/selectAll";
+    }
+
+    @RequestMapping("/toInsert")
+    public String toInset(Model model ){
+        model.addAttribute("statusList",ss.selectAll());
+        return "insert";
+    }
+
 }

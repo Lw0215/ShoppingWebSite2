@@ -1,3 +1,5 @@
 
-csquid:UselessImportCheck"9Remove this unused import 'com.lw.service.StatusService'.(º©ƒ$8í‚÷Üê-
-\squid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(øíŠã8‰ãÛæè-
+\squid:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(øíŠã8‰ãÛæè-
+\squid:S3752 ">Add a "method" parameter to this "@RequestMapping" annotation.(»²ãî8ù¶¿Ýê-
+\squid:S3752(">Add a "method" parameter to this "@RequestMapping" annotation.(Ä·è‡8ËäÖÝê-
+psquid:S00117!"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š‘‹Ñ8¸àÌÞê-

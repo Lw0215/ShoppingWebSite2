@@ -17,5 +17,5 @@ public interface StatusService {
 
     int insert(Status staint);
 
-    int update(int id);
+    int update(Status  status);
 }

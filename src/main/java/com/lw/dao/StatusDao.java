@@ -18,6 +18,6 @@ public interface StatusDao {
 
     int insert(Status status);
 
-    int update(int id);
+    int update(Status status);
 
 }

@@ -21,7 +21,7 @@
     </insert>
 
     <update id="update">
-        update product set product_sum =#{productsum},product_price=#{productprice}, status_id=#{status_id}  where  product_id=#{productid};
+        update product set product_sum =#{productsum},product_price=#{productprice}, status_id=#{status_id.id}  where  product_id=#{productid};
     </update>
 
     <resultMap id="pro" type="com.lw.po.Product">
